@@ -1,0 +1,717 @@
+<html>
+<head><title>GURU-PURNIMA_GIFT_FROM_09CSE13</title>
+<script type="text/javascript">
+var opno=0,str=0,equal=0,he=" ";
+
+var j="",cnt=0,k=0,ans;
+
+var hex=new Array(10);
+
+var no,r="",div=5;
+
+function o2decimal()
+{
+	 
+		
+	no=j;	
+	var u=j;
+	
+	r=0;
+	div=no;
+	var k=0,i=0,a,b,c,s;
+	while(div!=0)
+	{
+		var n=1;
+		s=div%10;
+		
+		if(s==1)
+		{
+			div=div-1;
+			div=div/10;
+		}		
+
+		else if(s==2)
+		{
+			div=div-2;
+			div=div/10;
+		}
+		else if(s==3)
+		{
+			div=div-3;
+			div=div/10;
+		}
+		else if(s==4)
+		{
+			div=div-4;
+			div=div/10;
+		}
+		else if(s==5)
+		{
+			div=div-5;
+			div=div/10;
+		}
+		else if(s==6)
+		{
+			div=div-6;
+			div=div/10;
+		}
+		else if(s==7)
+		{
+			div=div-7;
+			div=div/10;
+		}
+		else if(s==0)
+		{
+			div=div/10;
+		}
+		else
+		{
+			alert("It's not OCTAL NO");
+			cleen();
+			return false;
+		}
+
+		
+		for(i=0;i<k;i++)
+		{
+			
+				n=n*8;
+				
+			
+
+		}
+		
+		a=n*s;
+		b=r;
+		
+		c=b*2-(b-a);
+		
+		r=c;
+		k=k+1;	
+		
+			
+		
+		
+	}
+
+	document.getElementById('screen').innerHTML=""+r;
+	j=r;
+	r="";
+
+}
+
+
+function b2decimal()
+{
+	 
+		
+	no=j;	
+	var u=j;
+	r=0;
+	
+	div=no;
+	var k=0,i=0,a,b,c,s;
+	while(div!=0)
+	{
+		var n=1;
+		s=div%10;
+		
+		if(s==1)
+		{
+			div=div-1;
+			div=div/10;
+		}		
+		else if(s==0)
+		{
+			div=div/10;
+		}
+		else
+		{
+			alert("It's not Binary");
+			cleen();
+			return false;
+		}
+		
+		for(i=0;i<k;i++)
+		{
+			
+				n=n*2;
+				
+			
+
+		}
+		
+		a=n*s;
+		b=r;
+		c=b*2-(b-a);
+		
+		r=c;
+		k=k+1;	
+		
+			
+		
+		
+	}
+
+	document.getElementById('screen').innerHTML=""+r;
+	j=r;
+	r="";
+
+}
+
+function save()
+{
+	 
+		
+	no=j;	
+
+	
+	
+	div=no;
+	
+	while(div!=0)
+	{
+		if(div%2==0)
+		{
+			
+			r="0"+r;
+			div=div/2;
+		}
+		else
+		{
+			
+			div=div-1;
+			div=div/2;
+			r="1"+r;
+		}
+		
+		
+	}
+
+	document.getElementById('screen').innerHTML=""+r;
+	j=r;
+	r="";
+	
+}
+function octal()
+{
+	 
+		
+	no=j;	
+
+	
+	
+	div=no;
+	
+	while(div!=0)
+	{
+		if(div%8==0)
+		{
+			
+			r="0"+r;
+			div=div/8;
+		}
+		else if(div%8==7)
+		{
+			
+			r="7"+r;
+			div=div-7;
+			div=div/8;
+		}	
+		else if(div%8==6)
+		{
+			
+			r="6"+r;
+			div=div-6;
+			div=div/8;
+		}
+		else if(div%8==5)
+		{
+			
+			r="5"+r;
+			div=div-5;
+			div=div/8;
+		}
+		else if(div%8==4)
+		{
+			
+			r="4"+r;
+			div=div-4;
+			div=div/8;
+		}	
+		else if(div%8==3)
+		{
+			
+			r="3"+r;
+			div=div-3;
+			div=div/8;
+		}	
+		else if(div%8==2)
+		{
+			
+			r="2"+r;
+			div=div-2;
+			div=div/8;
+		}	
+		else
+		{
+			
+			div=div-1;
+			div=div/8;
+			r="1"+r;
+		}
+		
+		
+	}
+
+	document.getElementById('screen').innerHTML=""+r;
+	j=r;
+	r="";
+	
+}
+function h2decimal()
+{
+	var i;
+		
+
+
+	var k=0,a,b,c,s;
+
+	r=0;
+	 
+		
+	
+
+
+	for(i=hex.length-1;i>=0;i--)
+	{
+		var n=1;
+		
+		
+		
+		s=hex[i];
+		if(s=='F')
+		{
+			s=15;
+			
+			
+		}
+		else if(s=='E')
+		{
+			s=14;
+			
+			
+		}
+		else if(s=='D')
+		{
+			s=13;
+			
+			
+		}
+		else if(s=='C')
+		{
+			s=12;
+			
+			
+		}
+		else if(s=='B')
+		{
+			s=11;
+			
+			
+		}
+		else if(s=='A')
+		{
+			s=10;
+			
+			
+		}
+
+		for(j=0;j<k;j++)
+		{
+			
+				n=n*16;
+				
+			
+
+		}
+		
+		a=n*s;
+		b=r;
+		
+		c=b*2-(b-a);
+			
+		r=c;
+		k=k+1;	
+	}
+	
+	
+	
+	
+	
+
+		
+		
+		
+			
+		
+		
+	
+
+	document.getElementById('screen').innerHTML=""+r;
+
+	
+
+	
+	j=r;
+	
+	r="";
+}
+function hexa()
+{
+	 
+		
+	no=j;	
+	
+	
+	
+	div=no;
+	
+	while(div!=0)
+	{
+		if(div%16==0)
+		{
+			
+			r="0"+r;
+			
+			div=div/16;
+			
+		}
+		else if(div%16==8)
+		{
+			
+			r="8"+r;
+			
+			div=div-8;
+			div=div/16;
+		}
+		else if(div%16==9)
+		{
+			
+			r="9"+r;
+			
+			div=div-9;
+			div=div/16;
+		}
+		else if(div%16==10)
+		{
+			
+			r="A"+r;
+			div=div-10;
+			div=div/16;
+		}
+		else if(div%16==11)
+		{
+			
+			r="B"+r;
+			div=div-11;
+			div=div/16;
+		}
+		else if(div%16==12)
+		{
+			
+			r="C"+r;
+			div=div-12;
+			div=div/16;
+		}
+		else if(div%16==13)
+		{
+			
+			r="D"+r;
+			div=div-13;
+			div=div/16;
+		}
+		else if(div%16==14)
+		{
+			
+			r="E"+r;
+			div=div-14;
+			div=div/16;
+		}
+		else if(div%16==15)
+		{
+			
+			r="F"+r;
+			div=div-15;
+			div=div/16;
+		}
+		else if(div%16==7)
+		{
+			
+			r="7"+r;
+			div=div-7;
+			div=div/16;
+		}	
+		else if(div%16==6)
+		{
+				
+			r="6"+r;
+			div=div-6;
+			div=div/16;
+		}
+		else if(div%16==5)
+		{	
+			r="5"+r;
+			div=div-5;
+			div=div/16;
+		}
+		else if(div%16==4)
+		{
+				
+			r="4"+r;
+			div=div-4;
+			div=div/16;
+		}	
+		else if(div%16==3)
+		{
+			
+			r="3"+r;
+			div=div-3;
+			div=div/16;
+		}	
+		else if(div%16==2)
+		{
+				
+			r="2"+r;
+			div=div-2;
+			div=div/16;
+		}
+			
+		else
+		{
+				
+			div=div-1;
+			div=div/16;
+			r="1"+r;
+		}
+		
+		
+	}
+
+	document.getElementById('screen').innerHTML=""+r;
+	hex=r;
+
+	j=0;
+	r="";
+	
+}
+function cleen()
+{
+	 j=0;cnt=0,k=0;opno=0,str=0;
+	document.getElementById('screen').innerHTML="&nbsp;";
+	
+
+}
+
+
+function calculation(i)
+{
+	
+	if(cnt==0)
+	{
+		
+		if(i=="0" || i=="1" || i=="2"|| i=="3" ||i=="4" || i=="5" || i=="6"|| i=="7" ||i=="8" || i=="9")
+		{
+		
+			j=j*10+i;
+			document.getElementById('screen').innerHTML=""+j;
+		
+		}
+	}
+
+	
+	if(i=="10" || i=="11" || i=="12"|| i=="15")
+	{		
+		equal=0;
+		opno=opno+1;
+		if(opno>1)
+		{
+			
+			if(oop==10)
+			{
+				ans=j+k;
+			}
+			if(oop==11)
+			{
+				ans=j-k;
+			}
+			if(oop==12)
+			{
+				ans=j*k;
+			}
+			if(oop==15)
+			{
+				ans=j/k;
+			}
+			j=ans;
+			cnt=1;
+			k=0;
+			str=0;
+			opno=0;
+			equal=1;
+			document.getElementById('screen').innerHTML=""+ans;
+			calculation(i);
+		}
+		else
+		{
+			if(j==0)
+			{
+				alert("Enter any no first");
+				
+			
+			}
+			if(j!=0)
+			{
+				cnt=1;
+				oop=i;
+			}
+			if(i==10)
+			{
+				str=document.getElementById('screen').innerHTML=""+j+"+";
+			}
+			if(i==11)
+			{
+				 str=document.getElementById('screen').innerHTML=""+j+"-";
+			}
+			if(i==12)
+			{
+				 str=document.getElementById('screen').innerHTML=""+j+"*";
+			}
+			if(i==15)
+			{
+				 str=document.getElementById('screen').innerHTML=""+j+"/";
+			}
+		}
+	}
+	
+	if(cnt==1)
+	{
+		if(equal==1)
+		{
+			cnt=0;
+			k=0;
+			str=0;
+			opno=0;
+			equal=0;
+			j=0;
+			k=0;
+			calculation(i);
+				
+		}
+		else
+		{		
+			if(i=="0" || i=="1" || i=="2"|| i=="3" ||i=="4" || i=="5" || i=="6"|| i=="7" ||i=="8" || i=="9")
+			{
+		
+				k=k*10+i;
+				document.getElementById('screen').innerHTML=""+str+""+k;
+			
+			}
+		}
+	}
+	if(i==14)
+	{
+		if(oop==10)
+		{
+			ans=j+k;
+		}
+		if(oop==11)
+		{
+			ans=j-k;
+		}
+		if(oop==12)
+		{
+			ans=j*k;
+		}
+		if(oop==15)
+		{
+			ans=j/k;
+		}
+		j=ans;
+		cnt=1;
+		k=0;
+		str=0;
+		opno=0;
+		equal=1;
+		document.getElementById('screen').innerHTML=""+ans;
+		
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<center>
+</br></br></br><br>
+<form name=calc>
+<h1 align="center"> ----------CALCULATER-------------</h1>
+<hr>
+<table border=4>
+<tr>
+<td id="screen" align="right">
+<input type="text" name="input" size="25">
+</td>
+
+<tr>
+<td align="center">
+<input type=button name="one" value="1" OnClick="calculation(1)">
+<input type=button name="two" value="2" onClick="calculation(2);">
+<input type=button name="three" value="3" onClick="calculation(3);">
+<input type=button name="plus" value="+" onClick="calculation(10);">
+</td></tr>
+<tr>
+<td align="center">
+<input type=button name=four value=4 onClick="calculation(4);">
+<input type=button name=five value=5 onClick="calculation(5);">
+<input type=button name=six value=6 onClick="calculation(6);">
+<input type=button name=minus value="-" onClick="calculation(11)">
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type=button name=seven value=7 onClick="calculation(7);">
+<input type=button name=eight value=8 onClick="calculation(8);">
+<input type=button name=nine value=9 onClick="calculation(9);">
+<input type=button name=mul value="*" onClick="calculation(12);">
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type=button name="clear" value="c" onClick="cleen();">
+<input type=button name=zero value=0 onClick="calculation(0);">
+<input type=button name=dolt value="=" onClick="calculation(14);">
+<input type=button name=div value="/" onClick="calculation(15);">
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type=button name="To Binary" value="To Binary" onClick="save();">  <input type=button name="Binary" value="Binary to decimal" onClick="b2decimal();">
+
+
+</td></tr>
+<tr>
+<td  align="center">
+<input type=button name="Binary" value="To octal" onClick="octal();">	 <input type=button name="Binary" value="Octal to decimal" onClick="o2decimal();">
+
+</td></tr>
+<tr>
+<td  align="center">
+<input type=button name="Binary" value="To HeXA" onClick="hexa();">	 <input type=button name="Binary" value="Hexa to decimal" onClick="h2decimal();">
+
+</td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>
