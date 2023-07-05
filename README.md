@@ -7,8 +7,7 @@
 
  ## Overview 
 
- - Url_1: http://13.234.224.145/Jignesh-demo/Practice2012-Javascript-Calculater-Decimal-Octal-Hexa/
- - Url_2: http://jc-deloper.com/Jignesh-demo/Practice2012-Javascript-Calculater-Decimal-Octal-Hexa/
+ - Url: http://jcwebdeveloper.com/Jignesh-demo/Practice2012-Javascript-Calculater-Decimal-Octal-Hexa/
 
 
 
